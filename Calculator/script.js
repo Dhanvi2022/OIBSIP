@@ -1,31 +1,31 @@
-document.addEventListener("DOMContentLoaded",()=>
-{
-let input_field=document.getElementById("inputs");
-let buttons=document.querySelectorAll("button");
+document.addEventListener("DOMContentLoaded", () => {
+  let expressionField = document.getElementById("expression");
+  let resultField = document.getElementById("result");
+  let buttons = document.querySelectorAll("button");
 
-buttons.forEach(btn=>{
-    btn.addEventListener("click",()=>{
-        let value=btn.innerText;
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      let value = btn.innerText;
 
-        if(value==="C"){
-            input_field.value=""
+      if (value === "C") {
+        expressionField.innerText = "";
+        resultField.innerText = "";
+      } 
+      else if (value === "Back") {
+        expressionField.innerText = expressionField.innerText.slice(0, -1);
+      } 
+      else if (value === "=") {
+        try {
+          let expression = expressionField.innerText;
+          let result = eval(expression);
+          resultField.innerText = result;
+        } catch {
+          alert("Invalid Expression");
         }
-        else if(value==="Back"){
-            input_field.value=input_field.value.slice(0,-1);
-        }
-        else if(value==="="){
-            try{
-                let experssion=input_field.value;
-                let result=eval(experssion);
-                input_field.value=experssion+"\n"+result;
-            }
-            catch{
-                alert("invalid experssion");
-            }
-        }
-        else{
-            input_field.value+=value;
-        }
+      } 
+      else {
+        expressionField.innerText += value;
+      }
     });
-});
+  });
 });

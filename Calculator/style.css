@@ -1,0 +1,64 @@
+body{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+         }
+      .container{
+        background-color: rgb(218, 213, 213);
+        display: block;
+        width: 400px;
+        height:auto;
+        margin:30px;
+        border: none;
+        border-radius: 10px;
+        box-shadow:inset 0 0 5px gray;
+        outline:none;
+      }
+       .section{
+        padding:15px;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+       }
+       .section button{
+        width:60px;
+        height:60px;
+        border-radius: 50%;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 5px;
+        border:none;
+        cursor:pointer;
+        color:gray;
+        transition: 0.2s;
+       }
+       button:hover{
+        background-color:rgb(121, 120, 120);
+        color:white;
+       }
+       #inputs {
+        padding: 10px;
+        margin:5px auto 15px;
+        width: 95%;
+        display: block;
+        border: none;
+        border-radius: 10px;
+        font-size:20px;
+        height:50px;
+        background-color: rgb(218, 213, 213);
+        color: gray;
+        font-family: 'Courier New', Courier, monospace;
+        transition:0.3s;
+        outline:none;
+        resize:none;
+        text-align: left !important;
+        
+    }
+    #inputs:focus{
+        border-color:gray ;
+    }
+    hr{
+        border:none;
+        height:1.5px;
+        box-shadow:0 2px 5px rgb(128, 128, 128,2.0);
+    }

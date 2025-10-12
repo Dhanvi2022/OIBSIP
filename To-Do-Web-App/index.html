@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-Web-App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 To-Do Web App</h1>
+
+        <div class="input-container">
+             <input type="text" placeholder="Add new task..." id="taskInput">
+        <button onclick="addTask()">Add</button>
+        </div>
+       
+        <div class="To-Do-Container">
+        <!-- Pending Box -->
+        <div class="pending-box">
+            <h2>⏳Pending task</h2>
+            <ul id="pendingTasks"></ul>
+        </div>
+        <!-- Compeleted Box -->
+        <div class="completed-box">
+            <h2>✅Completed task</h2>
+            <ul id="completedTasks"></ul>
+        </div>
+        </div>
+    </div>
+   
+</body>
+</html>
